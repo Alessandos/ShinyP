@@ -18,7 +18,7 @@ shinyServer(
       
       ## calculate correct numbers and correct numbers/positions
       correct <- sum(code==dices) #number of correct guesses 
-      correctNums <- sum(order(code)==order(dices)) #correct numbers guessed
+      correctNums <- sum(sort(code)==sort(dices)) #correct numbers guessed
       out1 <- paste("Correct Guesses: ", correct, " Correct Numbers: ", correctNums,
                     " Code: ", code[1], code[2], code[3], code[4], code[5])
       
